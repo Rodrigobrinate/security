@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist de Segurança de Redes</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #555;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        label {
+            margin-left: 8px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Checklist de Segurança de Redes</h1>
+
+        <h2>1. Fundamentos de Redes e Segurança</h2>
+        <ul>
+            <li>
+                <input type="checkbox" id="transmissao_midia_topologia">
+                <label for="transmissao_midia_topologia">Transmissão de Mídia e Topologia de Rede</label>
+                <ul>
+                    <li><input type="checkbox" id="mesh"><label for="mesh">Mesh</label></li>
+                    <li><input type="checkbox" id="tree"><label for="tree">Tree</label></li>
+                    <li><input type="checkbox" id="bus"><label for="bus">Bus</label></li>
+                    <li><input type="checkbox" id="star"><label for="star">Star</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="tcp_ip">
+                <label for="tcp_ip">TCP/IP</label>
+                <ul>
+                    <li><input type="checkbox" id="osi_tcp_ip"><label for="osi_tcp_ip">O Modelo OSI e os Protocolos TCP/IP</label></li>
+                    <li><input type="checkbox" id="tcp_ip_addressing"><label for="tcp_ip_addressing">Endereçamento TCP/IP</label></li>
+                    <li><input type="checkbox" id="address_classes"><label for="address_classes">Classes de Endereço</label></li>
+                    <li><input type="checkbox" id="private_ip_ranges"><label for="private_ip_ranges">Intervalos de Endereço IP Privados</label></li>
+                    <li><input type="checkbox" id="subnetting"><label for="subnetting">Subnetting</label></li>
+                    <li><input type="checkbox" id="vlsm"><label for="vlsm">Variable Length Subnet Masking (Máscara de Sub-rede de Tamanho Variável)</label></li>
+                    <li><input type="checkbox" id="cidr"><label for="cidr">Classless Interdomain Routing (Roteamento Entre Domínios Sem Classes)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="roteamento">
+                <label for="roteamento">Roteamento</label>
+                <ul>
+                    <li><input type="checkbox" id="examining_routing_process"><label for="examining_routing_process">Examinando o Processo de Roteamento</label></li>
+                    <li><input type="checkbox" id="arp_processes"><label for="arp_processes">Os Processos do Protocolo de Resolução de Endereços (ARP)</label></li>
+                    <li><input type="checkbox" id="routing_tables"><label for="routing_tables">Tabelas de Roteamento</label></li>
+                    <li><input type="checkbox" id="static_routing"><label for="static_routing">Roteamento Estático</label></li>
+                    <li><input type="checkbox" id="dynamic_routing"><label for="dynamic_routing">Roteamento Dinâmico</label></li>
+                    <li><input type="checkbox" id="routing_metrics"><label for="routing_metrics">Métricas de Roteamento</label></li>
+                    <li><input type="checkbox" id="choosing_routing_protocol"><label for="choosing_routing_protocol">Escolhendo um Protocolo de Roteamento</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>2. Criptografia</h2>
+        <ul>
+            <li>
+                <input type="checkbox" id="cripto_def_comp">
+                <label for="cripto_def_comp">Definição e Componentes</label>
+                <ul>
+                    <li><input type="checkbox" id="components_crypto_protocols"><label for="components_crypto_protocols">Componentes de Protocolos Criptográficos</label></li>
+                    <li><input type="checkbox" id="crypto_primitives"><label for="crypto_primitives">Primitivas Criptográficas</label></li>
+                    <li><input type="checkbox" id="encryption_algorithms"><label for="encryption_algorithms">Algoritmos de Criptografia</label></li>
+                    <li><input type="checkbox" id="hashing_algorithms"><label for="hashing_algorithms">Algoritmos de Hash</label></li>
+                    <li><input type="checkbox" id="mac_code"><label for="mac_code">Código de Autenticação de Mensagem (MAC)</label></li>
+                    <li><input type="checkbox" id="digital_signatures"><label for="digital_signatures">Assinaturas Digitais</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="crypto_standards">
+                <label for="crypto_standards">Padrões de Criptografia</label>
+                <ul>
+                    <li><input type="checkbox" id="des_standard"><label for="des_standard">Data Encryption Standard (DES)</label></li>
+                    <li><input type="checkbox" id="triple_des"><label for="triple_des">Triple DES</label></li>
+                    <li><input type="checkbox" id="aes_standard"><label for="aes_standard">Advanced Encryption Standard (AES)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="cryptanalysis">
+                <label for="cryptanalysis">Criptoanálise</label>
+                <ul>
+                    <li><input type="checkbox" id="modern_cryptanalysis_methods"><label for="modern_cryptanalysis_methods">Métodos Modernos de Criptoanálise</label></li>
+                    <li><input type="checkbox" id="side_channel_attacks"><label for="side_channel_attacks">Side Channel Attacks (Ataques de Canal Lateral)</label></li>
+                    <li><input type="checkbox" id="passive_attacks"><label for="passive_attacks">Passive Attacks (Ataques Passivos)</label></li>
+                    <li><input type="checkbox" id="chosen_attacks"><label for="chosen_attacks">Chosen Ciphertext and Chosen Plaintext Attacks (Ataques de Cifra Escolhida e Texto Plano Escolhido)</label></li>
+                    <li><input type="checkbox" id="xsl_attacks"><label for="xsl_attacks">XSL Attacks</label></li>
+                    <li><input type="checkbox" id="rng_attacks"><label for="rng_attacks">Random Number Generator Attacks (Ataques a Geradores de Números Aleatórios)</label></li>
+                    <li><input type="checkbox" id="related_key_attacks"><label for="related_key_attacks">Related Key Attacks (Ataques de Chave Relacionada)</label></li>
+                    <li><input type="checkbox" id="integral_cryptanalysis"><label for="integral_cryptanalysis">Integral Cryptanalysis (Criptoanálise Integral)</label></li>
+                    <li><input type="checkbox" id="differential_cryptanalysis"><label for="differential_cryptanalysis">Differential Cryptanalysis (Criptoanálise Diferencial)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="sage_utilization">
+                <label for="sage_utilization">Utilização de Sage</label>
+                <ul>
+                    <li><input type="checkbox" id="sage_getting_started"><label for="sage_getting_started">C.1 Getting Started With Sage (Começando com Sage)</label></li>
+                    <li><input type="checkbox" id="sage_programming"><label for="sage_programming">C.2 Programming With Sage (Programando com Sage)</label></li>
+                    <li><input type="checkbox" id="sage_input_interpreter"><label for="sage_input_interpreter">Input to the Interpreter (Entrada para o Intérprete)</label></li>
+                    <li><input type="checkbox" id="sage_data_types"><label for="sage_data_types">Data Types (Tipos de Dados)</label></li>
+                    <li><input type="checkbox" id="sage_math_operators"><label for="sage_math_operators">Mathematical Operators (Operadores Matemáticos)</label></li>
+                    <li><input type="checkbox" id="sage_control_statements"><label for="sage_control_statements">Control Statements (Instruções de Controle)</label></li>
+                    <li><input type="checkbox" id="sage_functions"><label for="sage_functions">Functions (Funções)</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>3. Segurança de Redes sem Fio</h2>
+        <ul>
+            <li>
+                <input type="checkbox" id="wireless_fundamentals">
+                <label for="wireless_fundamentals">Fundamentos</label>
+                <ul>
+                    <li><input type="checkbox" id="wireless_primer"><label for="wireless_primer">Wireless Communications Primer (Cartilha de Comunicações Sem Fio)</label></li>
+                    <li><input type="checkbox" id="electromagnetic_radiation"><label for="electromagnetic_radiation">Electromagnetic Radiation (Radiação Eletromagnética)</label></li>
+                    <li><input type="checkbox" id="infrared_transmissions"><label for="infrared_transmissions">Infrared Transmissions (Transmissões Infravermelhas)</label></li>
+                    <li><input type="checkbox" id="rf_transmissions"><label for="rf_transmissions">Radio Frequency Transmissions (Transmissões por Radiofrequência)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="wireless_components_config">
+                <label for="wireless_components_config">Componentes e Configurações</label>
+                <ul>
+                    <li><input type="checkbox" id="wlan_components"><label for="wlan_components">Wireless LANs and Their Components (Redes Locais Sem Fio e Seus Componentes)</label></li>
+                    <li><input type="checkbox" id="wireless_nics"><label for="wireless_nics">Wireless NICs (Placas de Rede Sem Fio)</label></li>
+                    <li><input type="checkbox" id="access_points"><label for="access_points">Access Points (Pontos de Acesso)</label></li>
+                    <li><input type="checkbox" id="remote_wireless_bridges"><label for="remote_wireless_bridges">Remote Wireless Bridges (Pontes Sem Fio Remotas)</label></li>
+                    <li><input type="checkbox" id="wireless_gateways"><label for="wireless_gateways">Wireless Gateways (Gateways Sem Fio)</label></li>
+                    <li><input type="checkbox" id="wlan_configurations"><label for="wlan_configurations">WLAN Configurations (Configurações de WLAN)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="wireless_standards_regulation">
+                <label for="wireless_standards_regulation">Padrões e Regulamentação</label>
+                <ul>
+                    <li><input type="checkbox" id="ieee_80211"><label for="ieee_80211">IEEE 802.11</label></li>
+                    <li><input type="checkbox" id="rf_fcc"><label for="rf_fcc">Radio Frequency and the FCC (Radiofrequência e a FCC)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="wireless_secure_implementation">
+                <label for="wireless_secure_implementation">Implementação Segura e Contramedidas</label>
+                <ul>
+                    <li><input type="checkbox" id="secure_wlan_implementation"><label for="secure_wlan_implementation">Secure WLAN Implementation (Implementação Segura de WLAN)</label></li>
+                    <li><input type="checkbox" id="wireless_association"><label for="wireless_association">Association with a Wireless Network (Associação com uma Rede Sem Fio)</label></li>
+                    <li><input type="checkbox" id="wireless_authentication"><label for="wireless_authentication">Wireless Authentication (Autenticação Sem Fio)</label></li>
+                    <li><input type="checkbox" id="default_wep_keys"><label for="default_wep_keys">Default WEP Keys (Chaves WEP Padrão)</label></li>
+                    <li><input type="checkbox" id="key_management_80211"><label for="key_management_80211">Key Management Concerns in 802.11 Networks (Preocupações com Gerenciamento de Chaves em Redes 802.11)</label></li>
+                    <li><input type="checkbox" id="mac_filtering_spoofing"><label for="mac_filtering_spoofing">MAC Address Filtering and Spoofing (Filtragem e Falsificação de Endereços MAC)</label></li>
+                    <li><input type="checkbox" id="wireless_device_portability"><label for="wireless_device_portability">Wireless Device Portability (Portabilidade de Dispositivos Sem Fio)</label></li>
+                    <li><input type="checkbox" id="wireless_security_solutions"><label for="wireless_security_solutions">Examining Wireless Security Solutions and Countermeasures (Examinando Soluções e Contramedidas de Segurança Sem Fio)</label></li>
+                    <li><input type="checkbox" id="wireless_security_policy"><label for="wireless_security_policy">Incorporating a Wireless Security Policy (Incorporando uma Política de Segurança Sem Fio)</label></li>
+                    <li><input type="checkbox" id="ensuring_physical_security"><label for="ensuring_physical_security">Ensuring Physical Security (Garantindo a Segurança Física)</label></li>
+                    <li><input type="checkbox" id="planning_ap_placement"><label for="planning_ap_placement">Planning AP Placement (Planejando a Localização dos APs)</label></li>
+                    <li><input type="checkbox" id="changing_default_settings"><label for="changing_default_settings">Changing Default Hardware and Software Settings (Alterando Configurações Padrão de Hardware e Software)</label></li>
+                    <li><input type="checkbox" id="strong_encryption_authentication"><label for="strong_encryption_authentication">Strong Encryption and Authentication (Criptografia e Autenticação Fortes)</label></li>
+                    <li><input type="checkbox" id="wireless_auditing"><label for="wireless_auditing">Wireless Auditing (Auditoria Sem Fio)</label></li>
+                    <li><input type="checkbox" id="ap_logging_functions"><label for="ap_logging_functions">AP Logging Functions (Funções de Log dos APs)</label></li>
+                    <li><input type="checkbox" id="best_practices_wireless_security"><label for="best_practices_wireless_security">Best Practices for Wireless Network Security (Melhores Práticas para Segurança de Redes Sem Fio)</label></li>
+                    <li><input type="checkbox" id="mobile_device_security"><label for="mobile_device_security">Mobile Device Security (Segurança de Dispositivos Móveis)</label></li>
+                    <li><input type="checkbox" id="approaches_mobile_security"><label for="approaches_mobile_security">Approaches to Mobile Device Security (Abordagens para Segurança de Dispositivos Móveis)</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>4. Gerenciamento de Ameaças e Vulnerabilidades</h2>
+        <ul>
+            <li>
+                <input type="checkbox" id="dealing_cybercrimes">
+                <label for="dealing_cybercrimes">Lidando com Cybercrimes</label>
+                <ul>
+                    <li><input type="checkbox" id="prevention"><label for="prevention">Prevention (Prevenção)</label></li>
+                    <li><input type="checkbox" id="detection"><label for="detection">Detection (Detecção)</label></li>
+                    <li><input type="checkbox" id="recovery"><label for="recovery">Recovery (Recuperação)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="security_assessment_analysis">
+                <label for="security_assessment_analysis">Avaliação e Análise de Segurança</label>
+                <ul>
+                    <li><input type="checkbox" id="system_security_policy"><label for="system_security_policy">System Security Policy (Política de Segurança do Sistema)</label></li>
+                    <li><input type="checkbox" id="building_security_policy"><label for="building_security_policy">Building a Security Policy (Construindo uma Política de Segurança)</label></li>
+                    <li><input type="checkbox" id="policy_access_rights_matrix"><label for="policy_access_rights_matrix">Security Policy Access Rights Matrix (Matriz de Direitos de Acesso da Política de Segurança)</label></li>
+                    <li><input type="checkbox" id="policy_procedures"><label for="policy_procedures">Policy and Procedures (Política e Procedimentos)</label></li>
+                    <li><input type="checkbox" id="security_requirements_specification"><label for="security_requirements_specification">Security Requirements Specification (Especificação de Requisitos de Segurança)</label></li>
+                    <li><input type="checkbox" id="threat_identification"><label for="threat_identification">Threat Identification (Identificação de Ameaças)</label></li>
+                    <li><input type="checkbox" id="human_factors"><label for="human_factors">Human Factors (Fatores Humanos)</label></li>
+                    <li><input type="checkbox" id="natural_disasters"><label for="natural_disasters">Natural Disasters (Desastres Naturais)</label></li>
+                    <li><input type="checkbox" id="infrastructure_failures"><label for="infrastructure_failures">Infrastructure Failures (Falhas de Infraestrutura)</label></li>
+                    <li><input type="checkbox" id="threat_analysis"><label for="threat_analysis">Threat Analysis (Análise de Ameaças)</label></li>
+                    <li><input type="checkbox" id="approaches_threat_analysis"><label for="approaches_threat_analysis">Approaches to Security Threat Analysis (Abordagens para Análise de Ameaças de Segurança)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="vulnerability_identification">
+                <label for="vulnerability_identification">Identificação de Vulnerabilidades</label>
+                <ul>
+                    <li><input type="checkbox" id="hardware_vuln"><label for="hardware_vuln">Hardware</label></li>
+                    <li><input type="checkbox" id="software_vuln"><label for="software_vuln">Software</label></li>
+                    <li><input type="checkbox" id="humanware_vuln"><label for="humanware_vuln">Humanware</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="traffic_analysis">
+                <label for="traffic_analysis">Análise de Tráfego</label>
+                <ul>
+                    <li><input type="checkbox" id="network_traffic_signatures"><label for="network_traffic_signatures">Network Traffic Signatures (Assinaturas de Tráfego de Rede)</label></li>
+                    <li><input type="checkbox" id="cve_standard"><label for="cve_standard">Examining the Common Vulnerabilities and Exposures Standard (CVE)</label></li>
+                    <li><input type="checkbox" id="understanding_signature_analysis"><label for="understanding_signature_analysis">Understanding Signature Analysis (Compreendendo a Análise de Assinatura)</label></li>
+                    <li><input type="checkbox" id="analyzing_packets"><label for="analyzing_packets">Analyzing Packets (Analisando Pacotes)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="suspicious_events">
+                <label for="suspicious_events">Eventos Suspeitos</label>
+                <ul>
+                    <li><input type="checkbox" id="packet_header_discrepancies"><label for="packet_header_discrepancies">Packet Header Discrepancies (Discrepâncias no Cabeçalho do Pacote)</label></li>
+                    <li><input type="checkbox" id="advanced_attacks_vuln"><label for="advanced_attacks_vuln">Advanced Attacks</label></li>
+                    <li><input type="checkbox" id="rpc_attacks"><label for="rpc_attacks">Remote Procedure Call Attacks</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>5. Tecnologias e Estratégias de Defesa</h2>
+        <ul>
+            <li>
+                <input type="checkbox" id="idps_systems">
+                <label for="idps_systems">Sistemas de Detecção e Prevenção de Intrusões (IDPS)</label>
+                <ul>
+                    <li><input type="checkbox" id="goals_idps"><label for="goals_idps">Goals of an IDPS (Objetivos de um IDPS)</label></li>
+                    <li><input type="checkbox" id="common_detection_methodologies"><label for="common_detection_methodologies">Common Detection Methodologies (Metodologias Comuns de Detecção)</label></li>
+                    <li><input type="checkbox" id="anomaly_signature_detection"><label for="anomaly_signature_detection">Anomaly and Signature Detection Systems (Sistemas de Detecção de Anomalias e Assinaturas)</label></li>
+                    <li><input type="checkbox" id="idps_components"><label for="idps_components">Examining IDPS Components (Examinando Componentes do IDPS)</label></li>
+                    <li><input type="checkbox" id="sensors_agents"><label for="sensors_agents">Sensors and Agents (Sensores e Agentes)</label></li>
+                    <li><input type="checkbox" id="detection_prevention_capabilities"><label for="detection_prevention_capabilities">Detection and Prevention Capabilities (Capacidades de Detecção e Prevenção)</label></li>
+                    <li><input type="checkbox" id="command_console"><label for="command_console">Command Console (Console de Comando)</label></li>
+                    <li><input type="checkbox" id="database_attack_signatures"><label for="database_attack_signatures">Database of Attack Signatures or Behaviors (Banco de Dados de Assinaturas de Ataque ou Comportamentos)</label></li>
+                    <li><input type="checkbox" id="options_idps"><label for="options_idps">Options for IDPSs (Opções para IDPSs)</label></li>
+                    <li><input type="checkbox" id="network_based_idps"><label for="network_based_idps">Network-Based IDPSs (IDPSs Baseados em Rede)</label></li>
+                    <li><input type="checkbox" id="host_based_idps"><label for="host_based_idps">Host-Based IDPSs (IDPSs Baseados em Host)</label></li>
+                    <li><input type="checkbox" id="hybrid_idps"><label for="hybrid_idps">Hybrid IDPSs (IDPSs Híbridos)</label></li>
+                    <li><input type="checkbox" id="securing_idps_components"><label for="securing_idps_components">Securing IDPS Components (Segurança dos Componentes do IDPS)</label></li>
+                    <li><input type="checkbox" id="idps_security_best_practices"><label for="idps_security_best_practices">IDPS Security Best Practices (Melhores Práticas de Segurança para IDPS)</label></li>
+                    <li><input type="checkbox" id="examining_intrusion_detection"><label for="examining_intrusion_detection">Examining Intrusion Detection Step by Step (Examinando a Detecção de Intrusão Passo a Passo)</label></li>
+                    <li><input type="checkbox" id="evaluating_idps_products"><label for="evaluating_idps_products">Evaluating IDPS Products (Avaliando Produtos IDPS)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="firewalls">
+                <label for="firewalls">Firewalls</label>
+                <ul>
+                    <li><input type="checkbox" id="overview_firewalls"><label for="overview_firewalls">Overview of Firewalls (Visão Geral de Firewalls)</label></li>
+                    <li><input type="checkbox" id="software_hardware_firewalls"><label for="software_hardware_firewalls">Software and Hardware Firewalls (Firewalls de Software e Hardware)</label></li>
+                    <li><input type="checkbox" id="software_based_firewalls"><label for="software_based_firewalls">Software-Based Firewalls (Firewalls Baseados em Software)</label></li>
+                    <li><input type="checkbox" id="hardware_firewalls"><label for="hardware_firewalls">Hardware Firewalls (Firewalls de Hardware)</label></li>
+                    <li><input type="checkbox" id="designing_firewall_configurations"><label for="designing_firewall_configurations">Designing Firewall Configurations (Projetando Configurações de Firewall)</label></li>
+                    <li><input type="checkbox" id="screening_routers"><label for="screening_routers">Screening Routers (Roteadores de Triagem)</label></li>
+                    <li><input type="checkbox" id="screened_hosts"><label for="screened_hosts">Screened Hosts (Hosts de Triagem)</label></li>
+                    <li><input type="checkbox" id="screened_subnet_dmzs"><label for="screened_subnet_dmzs">Screened Subnet DMZs (DMZs de Sub-rede de Triagem)</label></li>
+                    <li><input type="checkbox" id="multiple_dmz_firewall_configs"><label for="multiple_dmz_firewall_configs">Multiple DMZ/Firewall Configurations (Configurações de Múltiplas DMZs/Firewalls)</label></li>
+                    <li><input type="checkbox" id="multiple_firewall_configs"><label for="multiple_firewall_configs">Multiple Firewall Configurations (Configurações de Múltiplos Firewalls)</label></li>
+                    <li><input type="checkbox" id="reverse_firewalls"><label for="reverse_firewalls">Reverse Firewalls (Firewalls Reversos)</label></li>
+                    <li><input type="checkbox" id="choosing_firewall_configuration"><label for="choosing_firewall_configuration">Choosing a Firewall Configuration (Escolhendo uma Configuração de Firewall)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="bastion_hosts">
+                <label for="bastion_hosts">Bastion Hosts</label>
+                <ul>
+                    <li><input type="checkbox" id="general_requirements_bastion"><label for="general_requirements_bastion">General Requirements (Requisitos Gerais)</label></li>
+                    <li><input type="checkbox" id="selecting_bastion_host_machine"><label for="selecting_bastion_host_machine">Selecting the Bastion Host Machine (Selecionando a Máquina do Host Bastion)</label></li>
+                    <li><input type="checkbox" id="choosing_os_bastion"><label for="choosing_os_bastion">Choosing an Operating System (Escolhendo um Sistema Operacional)</label></li>
+                    <li><input type="checkbox" id="memory_processor_bastion"><label for="memory_processor_bastion">Memory and Processor Speed (Memória e Velocidade do Processador)</label></li>
+                    <li><input type="checkbox" id="location_network_bastion"><label for="location_network_bastion">Location on the Network (Localização na Rede)</label></li>
+                    <li><input type="checkbox" id="hardening_bastion_host"><label for="hardening_bastion_host">Hardening the Bastion Host (Protegendo o Host Bastion)</label></li>
+                    <li><input type="checkbox" id="selecting_services_bastion"><label for="selecting_services_bastion">Selecting Services to Provide (Selecionando Serviços a Fornecer)</label></li>
+                    <li><input type="checkbox" id="using_honeypots"><label for="using_honeypots">Using Honeypots (Usando Honeypots)</label></li>
+                    <li><input type="checkbox" id="disabling_user_accounts_bastion"><label for="disabling_user_accounts_bastion">Disabling User Accounts (Desabilitando Contas de Usuário)</label></li>
+                    <li><input type="checkbox" id="handling_backups_auditing_bastion"><label for="handling_backups_auditing_bastion">Handling Backups and Auditing (Lidando com Backups e Auditoria)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="vpns">
+                <label for="vpns">Redes Privadas Virtuais (VPNs)</label>
+                <ul>
+                    <li><input type="checkbox" id="vpn_concepts"><label for="vpn_concepts">VPN Concepts (Compreendendo os Conceitos de VPN)</label></li>
+                    <li><input type="checkbox" id="vpn_components"><label for="vpn_components">VPN Components (Componentes de VPN)</label></li>
+                    <li><input type="checkbox" id="types_of_vpns"><label for="types_of_vpns">Types of VPNs (Tipos de VPNs)</label></li>
+                    <li><input type="checkbox" id="evaluating_business_needs_vpns"><label for="evaluating_business_needs_vpns">Evaluating Business Needs for VPNs (Avaliando Necessidades de Negócios para VPNs)</label></li>
+                    <li><input type="checkbox" id="advantages_disadvantages_vpns"><label for="advantages_disadvantages_vpns">Advantages and Disadvantages of VPNs (Vantagens e Desvantagens de VPNs)</label></li>
+                    <li><input type="checkbox" id="vpn_design_architecture"><label for="vpn_design_architecture">Examining VPN Design and Architecture (Examinando o Design e a Arquitetura de VPNs)</label></li>
+                    <li><input type="checkbox" id="vpn_mesh_topology"><label for="vpn_mesh_topology">Mesh Topology (Topologia em Malha)</label></li>
+                    <li><input type="checkbox" id="vpn_star_topology"><label for="vpn_star_topology">Star Topology (Topologia em Estrela)</label></li>
+                    <li><input type="checkbox" id="vpn_hybrid_topology"><label for="vpn_hybrid_topology">Hybrid Topology (Topologia Híbrida)</label></li>
+                    <li><input type="checkbox" id="vpn_domains"><label for="vpn_domains">VPN Domains (Domínios de VPN)</label></li>
+                    <li><input type="checkbox" id="vpns_with_firewalls"><label for="vpns_with_firewalls">Using VPNs with Firewalls (Usando VPNs com Firewalls)</label></li>
+                    <li><input type="checkbox" id="ensuring_client_security_vpn"><label for="ensuring_client_security_vpn">Ensuring Client Security (Garantindo a Segurança do Cliente)</label></li>
+                    <li><input type="checkbox" id="auditing_vpns_policies"><label for="auditing_vpns_policies">Auditing VPNs and Setting VPN Policies (Auditando VPNs e Definindo Políticas de VPN)</label></li>
+                    <li><input type="checkbox" id="using_vpn_quarantine"><label for="using_vpn_quarantine">Using VPN Quarantine (Usando Quarentena de VPN)</label></li>
+                    <li><input type="checkbox" id="logging_vpn_activity"><label for="logging_vpn_activity">Logging VPN Activity (Registrando Atividade de VPN)</label></li>
+                    <li><input type="checkbox" id="auditing_compliance_vpn_policies"><label for="auditing_compliance_vpn_policies">Auditing Compliance with VPN Policies (Auditando a Conformidade com Políticas de VPN)</label></li>
+                    <li><input type="checkbox" id="guidelines_vpn_policies"><label for="guidelines_vpn_policies">Guidelines for VPN Policies (Diretrizes para Políticas de VPN)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="defense_in_depth">
+                <label for="defense_in_depth">Defesa em Profundidade</label>
+                <ul>
+                    <li><input type="checkbox" id="active_defense_in_depth"><label for="active_defense_in_depth">Active Defense-in-Depth (Defesa Ativa em Profundidade)</label></li>
+                    <li><input type="checkbox" id="adding_security_layers"><label for="adding_security_layers">Adding Security Layers (Adicionando Camadas de Segurança)</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>6. Políticas de Segurança e Gerenciamento</h2>
+        <ul>
+            <li>
+                <input type="checkbox" id="security_policy_life_cycle">
+                <label for="security_policy_life_cycle">Ciclo de Vida da Política de Segurança</label>
+                <ul>
+                    <li><input type="checkbox" id="needs_assessment"><label for="needs_assessment">Needs Assessment (Avaliação de Necessidades)</label></li>
+                    <li><input type="checkbox" id="system_design"><label for="system_design">System Design (Projeto do Sistema)</label></li>
+                    <li><input type="checkbox" id="system_implementation"><label for="system_implementation">System Implementation (Implementação do Sistema)</label></li>
+                    <li><input type="checkbox" id="performance_monitoring"><label for="performance_monitoring">Performance Monitoring (Monitoramento de Desempenho)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="risk_analysis">
+                <label for="risk_analysis">Análise de Risco</label>
+                <ul>
+                    <li><input type="checkbox" id="risk_analysis_factors"><label for="risk_analysis_factors">Risk Analysis Factors (Fatores de Análise de Risco)</label></li>
+                    <li><input type="checkbox" id="risk_analysis_methods"><label for="risk_analysis_methods">Risk Analysis Methods (Métodos de Análise de Risco)</label></li>
+                    <li><input type="checkbox" id="risk_analysis_process"><label for="risk_analysis_process">The Risk Analysis Process (O Processo de Análise de Risco)</label></li>
+                    <li><input type="checkbox" id="analyzing_economic_impacts"><label for="analyzing_economic_impacts">Analyzing Economic Impacts (Análise de Impactos Econômicos)</label></li>
+                    <li><input type="checkbox" id="techniques_minimizing_risk"><label for="techniques_minimizing_risk">Techniques for Minimizing Risk (Técnicas para Minimizar Riscos)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="developing_security_policy">
+                <label for="developing_security_policy">Desenvolvimento de Políticas de Segurança</label>
+                <ul>
+                    <li><input type="checkbox" id="steps_creating_security_policy"><label for="steps_creating_security_policy">Steps to Creating a Security Policy (Etapas para Criar uma Política de Segurança)</label></li>
+                    <li><input type="checkbox" id="identifying_security_policy_categories"><label for="identifying_security_policy_categories">Identifying Security Policy Categories (Identificando Categorias de Política de Segurança)</label></li>
+                    <li><input type="checkbox" id="general_best_practices_security_policy"><label for="general_best_practices_security_policy">General Best Practices for a Security Policy (Melhores Práticas Gerais para uma Política de Segurança)</label></li>
+                    <li><input type="checkbox" id="teaching_employees_acceptable_use"><label for="teaching_employees_acceptable_use">Teaching Employees About Acceptable Use (Ensinando aos Funcionários sobre o Uso Aceitável)</label></li>
+                    <li><input type="checkbox" id="outlining_penalties_violations"><label for="outlining_penalties_violations">Outlining Penalties for Violations (Delineando Penalidades por Violações)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="ongoing_security_management">
+                <label for="ongoing_security_management">Gerenciamento Contínuo da Segurança</label>
+                <ul>
+                    <li><input type="checkbox" id="security_event_management"><label for="security_event_management">Security Event Management (Gerenciamento de Eventos de Segurança)</label></li>
+                    <li><input type="checkbox" id="monitoring_events"><label for="monitoring_events">Monitoring Events (Monitoramento de Eventos)</label></li>
+                    <li><input type="checkbox" id="managing_data_multiple_sensors"><label for="managing_data_multiple_sensors">Managing Data from Multiple Sensors (Gerenciamento de Dados de Múltiplos Sensores)</label></li>
+                    <li><input type="checkbox" id="security_auditing"><label for="security_auditing">Security Auditing (Auditoria de Segurança)</label></li>
+                    <li><input type="checkbox" id="operational_auditing"><label for="operational_auditing">Operational Auditing (Auditoria Operacional)</label></li>
+                    <li><input type="checkbox" id="independent_auditing"><label for="independent_auditing">Independent Auditing (Auditoria Independente)</label></li>
+                    <li><input type="checkbox" id="managing_idps"><label for="managing_idps">Managing an IDPS (Gerenciamento de um IDPS)</label></li>
+                    <li><input type="checkbox" id="managing_memory"><label for="managing_memory">Managing Memory (Gerenciamento de Memória)</label></li>
+                    <li><input type="checkbox" id="managing_bandwidth"><label for="managing_bandwidth">Managing Bandwidth (Gerenciamento de Largura de Banda)</label></li>
+                    <li><input type="checkbox" id="managing_storage"><label for="managing_storage">Managing Storage (Gerenciamento de Armazenamento)</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>7. Aspectos Adicionais de Segurança</h2>
+        <ul>
+            <li>
+                <input type="checkbox" id="sensor_networks">
+                <label for="sensor_networks">Sensores</label>
+                <ul>
+                    <li><input type="checkbox" id="growth_sensor_networks"><label for="growth_sensor_networks">The Growth of Sensor Networks (O Crescimento de Redes de Sensores)</label></li>
+                    <li><input type="checkbox" id="design_factors_sensor_networks"><label for="design_factors_sensor_networks">Design Factors in Sensor Networks (Fatores de Design em Redes de Sensores)</label></li>
+                    <li><input type="checkbox" id="routing_sensor"><label for="routing_sensor">Routing (Roteamento)</label></li>
+                    <li><input type="checkbox" id="power_consumption_sensor"><label for="power_consumption_sensor">Power Consumption (Consumo de Energia)</label></li>
+                    <li><input type="checkbox" id="fault_tolerance_sensor"><label for="fault_tolerance_sensor">Fault Tolerance (Tolerância a Falhas)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="regulation_legislation">
+                <label for="regulation_legislation">Regulamentação e Legislação</label>
+                <ul>
+                    <li><input type="checkbox" id="legislation"><label for="legislation">Legislation (Legislação)</label></li>
+                    <li><input type="checkbox" id="regulation"><label for="regulation">Regulation (Regulamentação)</label></li>
+                    <li><input type="checkbox" id="self_regulation"><label for="self_regulation">Self-Regulation (Autorregulação)</label></li>
+                    <li><input type="checkbox" id="hardware_based_self_regulation"><label for="hardware_based_self_regulation">Hardware-Based Self-Regulation (Autorregulação Baseada em Hardware)</label></li>
+                    <li><input type="checkbox" id="software_based_self_regulation"><label for="software_based_self_regulation">Software-Based Self-Regulation (Autorregulação Baseada em Software)</label></li>
+                    <li><input type="checkbox" id="education_regulation"><label for="education_regulation">Education (Educação)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="cloud_security">
+                <label for="cloud_security">Segurança em Nuvem</label>
+                <ul>
+                    <li><input type="checkbox" id="security_data_in_transition"><label for="security_data_in_transition">Security of Data in Transition (Segurança de Dados em Transição)</label></li>
+                    <li><input type="checkbox" id="cloud_security_best_practices"><label for="cloud_security_best_practices">Cloud Security Best Practices (Melhores Práticas de Segurança em Nuvem)</label></li>
+                    <li><input type="checkbox" id="slas"><label for="slas">Service-Level Agreements (SLAs)</label></li>
+                    <li><input type="checkbox" id="data_encryption_cloud"><label for="data_encryption_cloud">Data Encryption (Criptografia de Dados)</label></li>
+                    <li><input type="checkbox" id="web_access_point_security"><label for="web_access_point_security">Web Access Point Security (Segurança de Ponto de Acesso Web)</label></li>
+                    <li><input type="checkbox" id="compliance_cloud"><label for="compliance_cloud">Compliance (Conformidade)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="security_evaluation">
+                <label for="security_evaluation">Avaliação de Segurança</label>
+                <ul>
+                    <li><input type="checkbox" id="tni_red_book"><label for="tni_red_book">Trusted Network Interpretation (TNI): The Red Book (Interpretação de Redes Confiáveis: O Livro Vermelho)</label></li>
+                    <li><input type="checkbox" id="evaluation_means_security"><label for="evaluation_means_security">Does Evaluation Mean Security? (Avaliação Significa Segurança?)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="network_security_protocols">
+                <label for="network_security_protocols">Protocolos de Segurança de Redes de Computadores</label>
+            </li>
+            <li>
+                <input type="checkbox" id="disaster_management">
+                <label for="disaster_management">Gerenciamento de Desastres</label>
+                <ul>
+                    <li><input type="checkbox" id="categories_of_disasters"><label for="categories_of_disasters">Categories of Disasters (Categorias de Desastres)</label></li>
+                    <li><input type="checkbox" id="disaster_prevention"><label for="disaster_prevention">Disaster Prevention (Prevenção de Desastres)</label></li>
+                    <li><input type="checkbox" id="disaster_response"><label for="disaster_response">Disaster Response (Resposta a Desastres)</label></li>
+                    <li><input type="checkbox" id="disaster_recovery"><label for="disaster_recovery">Disaster Recovery (Recuperação de Desastres)</label></li>
+                    <li><input type="checkbox" id="planning_disaster_recovery"><label for="planning_disaster_recovery">Planning for a Disaster Recovery (Planejamento para a Recuperação de Desastres)</label></li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="authorization_systems">
+                <label for="authorization_systems">Autorização</label>
+                <ul>
+                    <li><input type="checkbox" id="types_authorization_systems"><label for="types_authorization_systems">Types of Authorization Systems (Tipos de Sistemas de Autorização)</label></li>
+                    <li><input type="checkbox" id="centralized_auth"><label for="centralized_auth">Centralized (Centralizado)</label></li>
+                    <li><input type="checkbox" id="decentralized_auth"><label for="decentralized_auth">Decentralized (Descentralizado)</label></li>
+                    <li><input type="checkbox" id="implicit_auth"><label for="implicit_auth">Implicit (Implícito)</label></li>
+                    <li><input type="checkbox" id="explicit_auth"><label for="explicit_auth">Explicit (Explícito)</label></li>
+                    <li><input type="checkbox" id="authorization_principles"><label for="authorization_principles">Authorization Principles (Princípios de Autorização)</label></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
